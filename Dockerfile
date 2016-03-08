@@ -1,8 +1,10 @@
-FROM ubuntu:14.04
+# docker build -t gifify -f Dockerfile.gifify .
+# docker run -ti --rm -v $(pwd)/data:/data gifify test.mkv -o test.gif
+FROM ubuntu:16.04
 
 RUN apt-get update
 RUN apt-get -y install software-properties-common
-RUN add-apt-repository ppa:jon-severinsson/ffmpeg
+# RUN add-apt-repository ppa:jon-severinsson/ffmpeg
 RUN apt-get update
 RUN apt-get -y install ffmpeg unzip imagemagick curl
 
